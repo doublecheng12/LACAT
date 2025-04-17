@@ -1,2 +1,3 @@
-# LACAT-Code
-ready for opensource
+# LACAT
+
+Code for EMNLP2024 LACAT.

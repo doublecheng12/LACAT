@@ -1,0 +1,56 @@
+{
+  "system": {
+    "data_path": "../data",
+    "checkpoint_path": "../ckpt",
+    "result_path": "../results",
+    "seed": 42,
+    "device": "cuda:0"
+  },
+  "data": {
+    "dataset_name": "moocradar",
+    "train_ratio": 0.8,
+    "validation_ratio": 0.1,
+    "test_ratio": 0.1
+  },
+  "models": {
+    "irt": {
+      "hidden_dim": 128,
+      "latent_dim": 1,
+      "learning_rate": 0.002,
+      "weight_decay": 1e-5,
+      "dropout": 0.2,
+      "batch_size": 64,
+      "epochs": 50
+    }
+  },
+  "agent": {
+    "model_type": "irt",
+    "max_steps": 20,
+    "threshold": 0.3,
+    "reward_weights": {
+      "accuracy": 0.5,
+      "coverage": 0.3,
+      "novelty": 0.2
+    }
+  },
+  "environment": {
+    "test_length": 15
+  },
+  "llm": {
+    "provider": "openai",
+    "model_name": "gpt-3.5-turbo",
+    "api_key": "",
+    "api_base": "https://api.openai.com/v1",
+    "temperature": 0,
+    "max_tokens": 1024,
+    "timeout": 30,
+    "max_retries": 3,
+    "retry_delay": 5
+  },
+  "logging": {
+    "level": "INFO",
+    "save_records": true,
+    "save_explanations": true,
+    "verbose": true
+  }
+}
