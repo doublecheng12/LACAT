@@ -16,9 +16,7 @@ from src.llms.generator import Generator
 from src.llms.first_try import FirstTry
 from src.llms.longterm_memory import LongTermMemory
 from src.llms.short_memory import ShortTermMemory
-from src.llms.monitor import Monitor
 from src.llms.critic import Critic
-from src.llms.predict import Predict
 from src.utils.data_utils import get_problem_detail, get_correct
 
 # 配置日志记录
