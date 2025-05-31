@@ -78,9 +78,8 @@ class AdaptiveAgent:
         self.shortterm_memory = ShortTermMemory(llm=self.llm)
         self.first_try = FirstTry(llm=self.llm)
         self.profile = ""
-        self.monitor = Monitor(llm=self.llm)
         self.critic = Critic(llm=self.llm)
-        self.predict = Predict(llm=self.llm)
+
         
         # 运行计数器和状态
         self.run_count = 0
